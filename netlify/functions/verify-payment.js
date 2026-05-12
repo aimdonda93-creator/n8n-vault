@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-const RZP_KEY_SECRET = 'zOZJiT3ud3GjFNYAt10fY72t';
+const RZP_KEY_SECRET = 'Un7XEGvJqctogOWmIxB6pePW';
 const DRIVE_LINK = 'https://drive.google.com/file/d/1F4T9ud2QEDhppKNivsJ8DLQ3lX2ngz-I/view?usp=sharing';
 
 exports.handler = async (event) => {

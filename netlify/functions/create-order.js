@@ -1,5 +1,5 @@
-const RZP_KEY_ID = 'rzp_test_SoKtamX35bBzmX';
-const RZP_KEY_SECRET = 'zOZJiT3ud3GjFNYAt10fY72t';
+const RZP_KEY_ID = 'rzp_live_SoNX2Ls05bloCP';
+const RZP_KEY_SECRET = 'Un7XEGvJqctogOWmIxB6pePW';
 const AMOUNT_PAISE = 100; // Temp ₹1 for production test (restore to 39900 for live)
 
 exports.handler = async (event) => {
