@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N8N Vault — 10,000+ N8N Workflow Templates | Automate Everything Instantly</title>
+  <meta name="description" content="Get 10,000+ ready-to-use N8N workflow templates for AI automation, CRM, data pipelines, social media & more. Perfect for n8n power users and AI learners. One-time purchase, instant download." />
+  <meta name="keywords" content="n8n templates, n8n workflows, AI automation, workflow automation, n8n tutorial, AI learner, n8n download, automation templates, ChatGPT n8n, n8n beginner, n8n advanced" />
+  <meta name="author" content="N8N Vault" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://n8nvault.netlify.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="N8N Vault — 10,000+ N8N Workflow Templates" />
+  <meta property="og:description" content="The most complete n8n template library for AI learners & automation engineers. One purchase, lifetime access. ₹499 only." />
+  <meta property="og:url" content="https://n8nvault.netlify.app/" />
+  <meta property="og:site_name" content="N8N Vault" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="N8N Vault — 10,000+ N8N Workflow Templates" />
+  <meta name="twitter:description" content="The most complete n8n template library. ₹499 only. Instant download." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "N8N Vault — 10,000+ N8N Workflow Templates",
+    "description": "The most complete n8n workflow template bundle for AI learners, automation engineers, and freelancers.",
+    "brand": { "@type": "Brand", "name": "N8N Vault" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "499",
+      "availability": "https://schema.org/InStock",
+      "url": "https://n8nvault.netlify.app/"
+    },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "128" }
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">N8N<span class="logo-accent">Vault</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#whats-inside">What's Inside</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <button class="btn-nav-cta" id="nav-buy-btn">Buy @ <s>₹999</s> ₹499</button>
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#features">Features</a>
+    <a href="#whats-inside">What's Inside</a>
+    <a href="#faq">FAQ</a>
+    <button class="btn-primary" id="mobile-buy-btn">Buy Now ₹499</button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-icon">🚀</span>
+        10,000+ Plug-and-play n8n Workflows · Lifetime access
+      </div>
+
+      <h1 class="hero-headline">
+        Stop Building.<br />
+        <span class="gradient-text">Start Shipping.</span>
+      </h1>
+
+      <p class="hero-sub">
+        The complete <strong>n8n workflow bundle</strong> for AI learners &amp; automation engineers —
+        ChatGPT, social media, CRM, data pipelines and DevOps on autopilot.
+      </p>
+
+      <div class="price-block">
+        <span class="price-original">₹999</span>
+        <span class="price-current">₹499</span>
+        <span class="price-badge">50% OFF</span>
+      </div>
+
+      <div class="hero-cta-row">
+        <button class="btn-primary btn-hero" id="buy-btn">
+          Get the Bundle — <s>₹999</s>&nbsp;<strong>₹499</strong> →
+        </button>
+        <div id="loading" class="loading-spinner" style="display:none;">
+          <div class="spinner"></div>
+          <span>Processing…</span>
+        </div>
+      </div>
+      <div class="cta-scarcity"><s>₹999</s> &nbsp;50% OFF · Only first 100 clients</div>
+
+      <div id="payment-status" class="payment-status" style="display:none;"></div>
+
+      <div class="trust-badges" style="margin-top:20px;">
+        <span class="trust-badge"><span class="trust-icon">🔒</span> Secure Razorpay checkout</span>
+        <span class="trust-badge"><span class="trust-icon">📩</span> Instant delivery</span>
+        <span class="trust-badge"><span class="trust-icon">⭐</span> 4.9 / 5 from 200+ buyers</span>
+      </div>
+    </div>
+
+    <!-- Hero Visual -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="workflow-mockup">
+        <div class="wf-card wf-card-1">
+          <div class="wf-header"><span class="wf-dot green"></span><span class="wf-dot yellow"></span><span class="wf-dot red"></span></div>
+          <div class="wf-body">
+            <div class="wf-node node-trigger">Webhook Trigger</div>
+            <div class="wf-arrow">↓</div>
+            <div class="wf-node node-ai">🤖 ChatGPT</div>
+            <div class="wf-arrow">↓</div>
+            <div class="wf-node node-action">Send Email</div>
+          </div>
+        </div>
+        <div class="wf-card wf-card-2">
+          <div class="wf-header"><span class="wf-dot green"></span><span class="wf-dot yellow"></span><span class="wf-dot red"></span></div>
+          <div class="wf-body">
+            <div class="wf-node node-trigger">Schedule Trigger</div>
+            <div class="wf-arrow">↓</div>
+            <div class="wf-node node-data">Google Sheets</div>
+            <div class="wf-arrow">↓</div>
+            <div class="wf-node node-action">Slack Notify</div>
+          </div>
+        </div>
+        <div class="wf-card wf-card-3">
+          <div class="wf-header"><span class="wf-dot green"></span><span class="wf-dot yellow"></span><span class="wf-dot red"></span></div>
+          <div class="wf-body">
+            <div class="wf-node node-trigger">HTTP Request</div>
+            <div class="wf-arrow">↓</div>
+            <div class="wf-node node-ai">🧠 Claude AI</div>
+            <div class="wf-arrow">↓</div>
+            <div class="wf-node node-data">Airtable</div>
+          </div>
+        </div>
+        <div class="wf-count-badge">+9,997 more</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<div class="stats-bar">
+  <div class="container stats-inner">
+    <div class="stat-item"><span class="stat-num">10,000+</span><span class="stat-label">Workflows</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num">100+</span><span class="stat-label">Categories</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num">500+</span><span class="stat-label">App Integrations</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat-item"><span class="stat-num">4.9★</span><span class="stat-label">Avg Rating</span></div>
+  </div>
+</div>
+
+<!-- ===== FEATURES ===== -->
+<section class="section features-section" id="features">
+  <div class="container">
+    <div class="section-tag">— What You Get —</div>
+    <h2 class="section-headline">Every Category.<br /><span class="gradient-text">Every Use Case.</span></h2>
+    <p class="section-sub">Covering the most in-demand automation categories used by AI learners and professionals worldwide.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon-wrap feature-icon-purple">🤖</div>
+        <h3>AI &amp; LLM Workflows</h3>
+        <p>Plug-and-play workflows for ChatGPT, Claude, Gemini, Mistral, and open-source LLMs.</p>
+        <ul class="feature-tags"><li>ChatGPT API</li><li>Claude</li><li>Gemini</li><li>Ollama</li></ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap feature-icon-blue">📊</div>
+        <h3>CRM &amp; Marketing</h3>
+        <p>Automate HubSpot, Salesforce, Mailchimp, and email campaigns automatically.</p>
+        <ul class="feature-tags"><li>HubSpot</li><li>Salesforce</li><li>Mailchimp</li><li>ActiveCampaign</li></ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap feature-icon-green">🔄</div>
+        <h3>Data Pipelines &amp; ETL</h3>
+        <p>Sync databases, transform data, call APIs, and build ETL workflows on autopilot.</p>
+        <ul class="feature-tags"><li>PostgreSQL</li><li>MySQL</li><li>REST APIs</li><li>GraphQL</li></ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap feature-icon-pink">📱</div>
+        <h3>Social Media Automation</h3>
+        <p>Schedule posts, auto-reply, scrape leads, and grow your LinkedIn and Twitter/X.</p>
+        <ul class="feature-tags"><li>LinkedIn</li><li>Twitter/X</li><li>Instagram</li><li>YouTube</li></ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap feature-icon-orange">🛒</div>
+        <h3>E-commerce &amp; Orders</h3>
+        <p>Automate order processing, inventory sync, and abandoned cart recovery.</p>
+        <ul class="feature-tags"><li>Shopify</li><li>WooCommerce</li><li>Stripe</li><li>Razorpay</li></ul>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrap feature-icon-cyan">🔧</div>
+        <h3>DevOps &amp; Monitoring</h3>
+        <p>GitHub PR notifications, server monitoring, alert routing, and CI/CD triggers.</p>
+        <ul class="feature-tags"><li>GitHub</li><li>PagerDuty</li><li>Grafana</li><li>Slack Alerts</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT'S INSIDE ===== -->
+<section class="section inside-section" id="whats-inside">
+  <div class="container inside-inner">
+    <div class="inside-content">
+      <div class="section-tag">— Inside the Bundle —</div>
+      <h2 class="section-headline">Everything You Need to<br /><span class="gradient-text">Start Automating Today</span></h2>
+      <p class="section-sub">Import any workflow into your n8n instance in under 60 seconds. All templates are tested and production-ready.</p>
+      <ul class="inside-checklist">
+        <li><span class="check">✓</span> 10,000+ pre-built, tested .json workflow files</li>
+        <li><span class="check">✓</span> AI &amp; LLM automation templates (ChatGPT, Claude, Gemini)</li>
+        <li><span class="check">✓</span> Social media growth &amp; engagement workflows</li>
+        <li><span class="check">✓</span> E-commerce &amp; Shopify automation flows</li>
+        <li><span class="check">✓</span> CRM lead management &amp; follow-up sequences</li>
+        <li><span class="check">✓</span> Data scraping &amp; web automation workflows</li>
+        <li><span class="check">✓</span> Google Workspace (Sheets, Docs, Gmail) automations</li>
+        <li><span class="check">✓</span> Notion, Airtable &amp; database sync flows</li>
+        <li><span class="check">✓</span> Slack, Discord &amp; Teams notification workflows</li>
+        <li><span class="check">✓</span> Finance &amp; invoice automation templates</li>
+        <li><span class="check">✓</span> Webhook &amp; API integration blueprints</li>
+        <li><span class="check">✓</span> Works with n8n Cloud, self-hosted &amp; desktop</li>
+      </ul>
+    </div>
+    <div class="inside-visual" aria-hidden="true">
+      <div class="folder-stack">
+        <div class="folder-card fc-1"><div class="folder-label">📁 AI & LLM</div><div class="folder-count">2,400+ workflows</div></div>
+        <div class="folder-card fc-2"><div class="folder-label">📁 Social Media</div><div class="folder-count">1,800+ workflows</div></div>
+        <div class="folder-card fc-3"><div class="folder-label">📁 E-commerce</div><div class="folder-count">1,200+ workflows</div></div>
+        <div class="folder-card fc-4"><div class="folder-label">📁 Data Pipelines</div><div class="folder-count">1,600+ workflows</div></div>
+        <div class="folder-card fc-5"><div class="folder-label">📁 CRM & Marketing</div><div class="folder-count">1,100+ workflows</div></div>
+        <div class="folder-more">+ 95 more categories</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="section pricing-section" id="pricing">
+  <div class="container pricing-inner">
+    <div class="pricing-left">
+      <div class="section-tag">ONE-TIME PAYMENT</div>
+      <h2>Lifetime access for<br />the price of a coffee<br />meet-up.</h2>
+      <p>Skip months of trial-and-error. The complete n8n workflow library is yours forever — including future updates.</p>
+      <ul class="pricing-checklist">
+        <li><span class="check">✓</span> 10,000+ production-ready n8n workflow JSONs</li>
+        <li><span class="check">✓</span> Step-by-step setup video guide</li>
+        <li><span class="check">✓</span> Free updates for 12 months</li>
+        <li><span class="check">✓</span> Private community access</li>
+        <li><span class="check">✓</span> API key &amp; credential checklist</li>
+        <li><span class="check">✓</span> Commercial use license</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <div class="pc-badge">🔥 Only first 100 clients</div>
+      <div class="pc-price">
+        <span class="pc-price-main">₹499</span>
+        <span class="pc-price-orig">₹999</span>
+      </div>
+      <p class="pc-tagline">One-time · No subscription · Lifetime updates</p>
+      <button class="btn-unlock" id="buy-btn-pricing">
+        Unlock the Bundle →
+      </button>
+      <p class="pc-security">🔒 256-bit secure payment · Instant delivery</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-tag">— What Buyers Say —</div>
+    <h2 class="section-headline">Real <span class="gradient-text">Reviews</span></h2>
+    <div class="testimonials-grid" style="margin-top:40px;">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"I was spending hours building n8n workflows from scratch. This bundle saved me weeks of work. The AI workflow section alone is worth 10x the price."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RK</div>
+          <div><strong>Rahul K.</strong><span>AI Freelancer, Bangalore</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Perfect for beginners. I'm learning n8n and having 10,000+ examples to reverse-engineer is insane value. The social media automation section is chef's kiss."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PS</div>
+          <div><strong>Priya S.</strong><span>Marketing Automation Student</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Downloaded, imported a CRM workflow, connected to my HubSpot in 20 minutes. My client was blown away. Paid for itself on the first project."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div><strong>Arjun M.</strong><span>No-Code Consultant, Mumbai</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section faq-section" id="faq">
+  <div class="container faq-inner">
+    <div class="section-tag">— Common Questions —</div>
+    <h2 class="section-headline">FAQ</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What exactly is n8n, and do I need to know coding?</summary>
+        <div class="faq-body">n8n is a free, open-source workflow automation tool — think Zapier but self-hosted and way more powerful. You don't need coding for most templates. Simply import the .json file into your n8n instance and connect your accounts.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Will these templates work with my version of n8n?</summary>
+        <div class="faq-body">Yes. All templates are compatible with n8n v1.x and above, including n8n Cloud, self-hosted Docker, and desktop.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How do I get the files after purchase?</summary>
+        <div class="faq-body">Immediately after your payment is confirmed, you'll be redirected to a download page with your Google Drive link. The link is saved in your browser for future access. No email required.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is this a one-time purchase or subscription?</summary>
+        <div class="faq-body">This is a one-time purchase. Pay once and get lifetime access to all 10,000+ templates. No monthly fees, no renewals.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What payment methods are accepted?</summary>
+        <div class="faq-body">We accept all major UPI apps (GPay, PhonePe, Paytm), credit/debit cards (Visa, Mastercard, RuPay), Net Banking, and Wallets — powered by Razorpay. 100% secure payment.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is there a refund policy?</summary>
+        <div class="faq-body">Due to the instant digital delivery nature of this product, we do not offer refunds once the download link is accessed. If you have a technical issue, reach out and we'll resolve it.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="section final-cta-section">
+  <div class="container final-cta-inner">
+    <div class="section-tag">— Limited Time Offer —</div>
+    <h2 class="final-cta-headline">
+      Stop Building from Scratch.<br />
+      <span class="gradient-text">Start Automating in Minutes.</span>
+    </h2>
+    <p class="final-cta-sub">Join hundreds of n8n users and AI learners saving 10+ hours per week.</p>
+    <div class="final-price-block">
+      <span class="price-original">₹999</span>
+      <span class="price-current">₹499</span>
+      <span class="price-badge">50% OFF — Today Only</span>
+    </div>
+    <button class="btn-primary btn-hero btn-final" id="buy-btn-final">
+      Get Instant Access →
+    </button>
+    <p class="final-cta-note">⚡ Instant delivery · 🔒 Razorpay secured · 📦 10,000+ templates</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">⚡ N8N<span class="logo-accent">Vault</span></span>
+      <p>The ultimate n8n workflow template library for AI learners &amp; automation professionals.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#features">Features</a>
+      <a href="#whats-inside">What's Inside</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-keywords">
+      <h4>Topics</h4>
+      <p>n8n templates · AI workflow automation · n8n beginner guide · ChatGPT n8n integration · workflow automation India · no-code automation</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 N8N Vault. All rights reserved. Powered by Razorpay.</p>
+  </div>
+</footer>
+
+<!-- ===== PAYMENT FAILED TOAST (shown after 2nd failure redirect) ===== -->
+<div id="payment-failed-toast" style="display:none;">
+  <div class="toast-icon">❌</div>
+  <div class="toast-body">
+    <strong>Payment Failed</strong>
+    <span>We couldn't process your payment after multiple attempts. Please try again later or contact support.</span>
+  </div>
+  <button class="toast-close" onclick="dismissToast()" aria-label="Dismiss">×</button>
+</div>
+
+<!-- ===== RETRY NOTIFICATION (shown after 1st failure) ===== -->
+<div id="retry-notification" style="display:none;">
+  <div class="retry-icon">⚠️</div>
+  <div class="retry-body">
+    <strong>Payment verification failed</strong>
+    <span>Something went wrong while verifying your payment. Please try again.</span>
+    <span id="retry-payment-id" style="display:none;"></span>
+  </div>
+  <div class="retry-actions">
+    <button class="btn-retry" id="retry-btn">Retry Payment</button>
+    <button class="retry-dismiss" id="retry-close-btn">Dismiss</button>
+  </div>
+</div>
+
+<!-- ===== PURCHASE MODAL ===== -->
+<div id="purchase-modal" class="modal-overlay" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+
+    <div class="modal-header">
+      <h2 id="modal-title">Get the n8n Workflow Bundle</h2>
+      <p class="modal-subtitle">
+        <s>₹999</s>&nbsp;<strong>₹499</strong>
+        &nbsp;·&nbsp;One-time payment&nbsp;·&nbsp;Lifetime access
+      </p>
+    </div>
+
+    <form id="purchase-form" novalidate>
+      <div class="form-group">
+        <label for="buyer-name">Full name</label>
+        <input type="text" id="buyer-name" placeholder="Aniket Sharma" required autocomplete="name" />
+      </div>
+      <div class="form-group">
+        <label for="buyer-email">Email</label>
+        <input type="email" id="buyer-email" placeholder="you@example.com" required autocomplete="email" />
+        <span class="form-hint">Workflow link will be emailed here</span>
+      </div>
+      <div class="form-group">
+        <label for="buyer-phone">Phone <span class="form-optional">(with country code)</span></label>
+        <input type="tel" id="buyer-phone" placeholder="+91 98765 43210" autocomplete="tel" />
+      </div>
+
+      <div id="modal-status" class="payment-status" style="display:none;"></div>
+
+      <button type="submit" class="btn-pay" id="btn-pay">
+        <span id="btn-pay-content">🔒 Pay <s>₹999</s>&nbsp;<strong>₹499 securely</strong></span>
+        <span id="btn-pay-loading" style="display:none;" class="btn-spinner"></span>
+      </button>
+
+      <p class="modal-footer-note">🛡️ Razorpay-secured · No spam, ever</p>
+    </form>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+// Animated network nodes canvas
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, nodes = [];
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+
+  function Node() {
+    this.x = Math.random() * W;
+    this.y = Math.random() * H;
+    this.vx = (Math.random() - 0.5) * 0.4;
+    this.vy = (Math.random() - 0.5) * 0.4;
+    this.r = Math.random() * 3 + 2;
+  }
+
+  function init() {
+    resize();
+    nodes = Array.from({length: 60}, () => new Node());
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    nodes.forEach(n => {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > W) n.vx *= -1;
+      if (n.y < 0 || n.y > H) n.vy *= -1;
+    });
+    // Draw connections
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < 130) {
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(200,160,255,${0.18 * (1 - dist/130)})`;
+          ctx.lineWidth = 0.7;
+          ctx.stroke();
+        }
+      }
+    }
+    // Draw nodes
+    nodes.forEach(n => {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(230,200,255,0.85)';
+      ctx.shadowColor = 'rgba(200,150,255,0.9)';
+      ctx.shadowBlur = 10;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    });
+    requestAnimationFrame(draw);
+  }
+
+  window.addEventListener('resize', resize);
+  init();
+  draw();
+})();
+
+// buy-btn-pricing is wired in main.js
+</script>
+</body>
+</html>

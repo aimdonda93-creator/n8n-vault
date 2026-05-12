@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Your N8N Vault Templates</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #08080f;
+      --card: #110d1e;
+      --pink: #f72585;
+      --pink-light: #ff5da8;
+      --purple: #7c3aed;
+      --purple-light: #9d5ef5;
+      --green: #10b981;
+      --gradient-btn: linear-gradient(90deg, #f72585 0%, #7c3aed 100%);
+      --text: #ffffff;
+      --text-muted: #b8b8d0;
+      --text-dim: #6b6b8a;
+      --border: rgba(255,255,255,0.07);
+      --radius: 16px;
+      --radius-full: 999px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background glow orbs */
+    body::before {
+      content: '';
+      position: fixed;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 65%);
+      top: -150px; left: -150px;
+      pointer-events: none;
+      border-radius: 50%;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(247,37,133,0.12) 0%, transparent 65%);
+      bottom: -120px; right: -100px;
+      pointer-events: none;
+      border-radius: 50%;
+    }
+
+    /* Navbar */
+    .dl-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      align-items: center;
+      padding: 14px 28px;
+      background: rgba(8,8,15,0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      z-index: 10;
+    }
+    .dl-nav-logo {
+      font-size: 17px; font-weight: 800; color: #fff;
+      text-decoration: none; display: flex; align-items: center; gap: 7px;
+    }
+    .dl-nav-logo span { color: var(--pink); }
+
+    /* Card */
+    .dl-card {
+      background: linear-gradient(145deg, #1a1030 0%, #110d1e 100%);
+      border: 1px solid rgba(247,37,133,0.18);
+      border-radius: 24px;
+      padding: 48px 40px 36px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 0 80px rgba(124,58,237,0.18),
+        0 24px 64px rgba(0,0,0,0.5);
+      animation: slideUp 0.4s ease both;
+    }
+    @keyframes slideUp {
+      from { opacity:0; transform:translateY(28px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    /* Top gradient line */
+    .dl-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: var(--gradient-btn);
+      border-radius: 24px 24px 0 0;
+    }
+
+    /* Success icon */
+    .dl-icon-wrap {
+      width: 80px; height: 80px;
+      background: rgba(16,185,129,0.1);
+      border: 2px solid rgba(16,185,129,0.25);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 24px;
+      box-shadow: 0 0 32px rgba(16,185,129,0.2);
+    }
+
+    .dl-card h1 {
+      font-size: 22px; font-weight: 800;
+      color: #fff; margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .dl-sub {
+      font-size: 14px; color: var(--text-muted);
+      line-height: 1.65; margin-bottom: 32px;
+    }
+    .dl-sub strong { color: #fff; }
+
+    /* Returning banner */
+    .returning-banner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(124,58,237,0.1);
+      border: 1px solid rgba(124,58,237,0.25);
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-size: 13px;
+      color: var(--purple-light);
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    /* Download button */
+    .btn-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--gradient-btn);
+      color: #fff;
+      font-size: 16px; font-weight: 700;
+      padding: 17px 24px;
+      border: none; border-radius: var(--radius-full);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 28px rgba(247,37,133,0.4);
+      margin-bottom: 16px;
+    }
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(247,37,133,0.55);
+      color: #fff;
+    }
+
+    /* Saved notice */
+    .saved-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: rgba(16,185,129,0.07);
+      border: 1px solid rgba(16,185,129,0.18);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 12px;
+      color: #6ee7b7;
+      text-align: left;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .saved-notice-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+
+    /* Payment meta */
+    .payment-meta {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      text-align: left;
+      word-break: break-all;
+      margin-bottom: 20px;
+    }
+
+    /* Error state */
+    .dl-error {
+      background: rgba(239,68,68,0.08);
+      border: 1px solid rgba(239,68,68,0.2);
+      border-radius: 12px;
+      padding: 20px;
+      color: #fca5a5;
+      font-size: 14px;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .dl-error a { color: var(--pink-light); text-decoration: underline; }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--pink-light); }
+
+    /* Loading */
+    #dl-loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      color: var(--text-muted);
+      font-size: 14px;
+      padding: 16px 0;
+    }
+    .spinner {
+      width: 32px; height: 32px;
+      border: 2px solid rgba(247,37,133,0.25);
+      border-top-color: var(--pink);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Hidden states */
+    #dl-content { display: none; }
+    #dl-error-content { display: none; }
+
+    /* Mail notice */
+    .mail-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(124, 58, 237, 0.08);
+      border: 1px solid rgba(124, 58, 237, 0.22);
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: left;
+      margin-bottom: 16px;
+    }
+    .mail-notice-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+    .mail-notice div { display: flex; flex-direction: column; gap: 4px; }
+    .mail-notice strong { font-size: 13px; font-weight: 700; color: #fff; }
+    .mail-notice span   { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+
+    /* Divider */
+    .dl-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin: 20px 0;
+    }
+
+    @media(max-width:480px) {
+      .dl-card { padding: 36px 24px 28px; }
+      .dl-nav { padding: 12px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="dl-nav">
+    <a href="index.html" class="dl-nav-logo">⚡ N8N<span>Vault</span></a>
+  </nav>
+
+  <div class="dl-card">
+
+    <!-- Loading -->
+    <div id="dl-loading">
+      <div class="spinner"></div>
+      <p>Verifying your purchase…</p>
+    </div>
+
+    <!-- Success -->
+    <div id="dl-content">
+      <div id="returning-banner" class="returning-banner" style="display:none;">
+        👋 Welcome back! Your download link is saved below.
+      </div>
+
+      <div class="dl-icon-wrap">🎉</div>
+      <h1>Your Templates Are Ready!</h1>
+      <p class="dl-sub">
+        Thank you for purchasing <strong>N8N Vault</strong>. Click below to download
+        all 10,000+ workflow templates from Google Drive.
+      </p>
+
+      <a id="drive-link-btn" href="#" target="_blank" rel="noopener" class="btn-download">
+        ⬇️&nbsp; Download from Google Drive
+      </a>
+
+      <div class="saved-notice">
+        <span class="saved-notice-icon">💾</span>
+        <span>This link is saved in your browser — you can return to this page anytime to re-download.</span>
+      </div>
+
+      <div class="payment-meta" id="payment-meta" style="display:none;"></div>
+
+      <div class="mail-notice">
+        <span class="mail-notice-icon">📧</span>
+        <div>
+          <strong>Check your inbox within 24 hours</strong>
+          <span>We'll email you the complete n8n workflow bundle along with setup instructions and tips to get started.</span>
+        </div>
+      </div>
+
+      <div class="dl-divider"></div>
+      <a href="index.html" class="back-link">← Back to N8N Vault</a>
+    </div>
+
+    <!-- Error -->
+    <div id="dl-error-content">
+      <div class="dl-icon-wrap" style="background:rgba(239,68,68,0.08);border-color:rgba(239,68,68,0.2);box-shadow:none;">❌</div>
+      <h1>Download Not Found</h1>
+      <div class="dl-error" id="dl-error-msg">
+        No valid download link found. If you completed a payment, please
+        <a href="index.html">return to the homepage</a> and contact support with your Razorpay payment ID.
+      </div>
+      <a href="index.html" class="back-link">← Back to N8N Vault</a>
+    </div>
+
+  </div>
+
+  <script src="assets/js/download.js"></script>
+</body>
+</html>

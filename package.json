@@ -1,0 +1,12 @@
+{
+  "name": "n8n-vault",
+  "version": "1.0.0",
+  "description": "N8N Vault - 10,000+ N8N Workflow Templates sales page",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
