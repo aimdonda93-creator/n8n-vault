@@ -107,13 +107,6 @@ form.addEventListener('submit', async (e) => {
       wallet: true,
       emi: false,
       paylater: false,
-      international: false,
-    },
-    config: {
-      display: {
-        preferences: { show_default_blocks: true },
-        hide: [{ method: 'international' }],
-      },
     },
   };
 
