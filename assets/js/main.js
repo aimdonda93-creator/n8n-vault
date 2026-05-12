@@ -1,5 +1,5 @@
 const RZP_KEY_ID      = 'rzp_test_SoKtamX35bBzmX';
-const AMOUNT_PAISE    = 39900; // Charged: ₹399 (displayed as ₹499)
+const AMOUNT_PAISE    = 100; // Temp ₹1 for production test (restore to 39900 for live)
 const DRIVE_LINK_B64  = btoa('https://drive.google.com/file/d/1F4T9ud2QEDhppKNivsJ8DLQ3lX2ngz-I/view?usp=sharing');
 
 /* ── Navbar scroll ── */

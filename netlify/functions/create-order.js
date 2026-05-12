@@ -1,6 +1,6 @@
 const RZP_KEY_ID = 'rzp_test_SoKtamX35bBzmX';
 const RZP_KEY_SECRET = 'zOZJiT3ud3GjFNYAt10fY72t';
-const AMOUNT_PAISE = 39900; // ₹399 (displayed as ₹499 on site)
+const AMOUNT_PAISE = 100; // Temp ₹1 for production test (restore to 39900 for live)
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
