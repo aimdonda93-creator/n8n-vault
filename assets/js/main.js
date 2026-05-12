@@ -100,6 +100,21 @@ form.addEventListener('submit', async (e) => {
     theme: { color: '#7c3aed' },
     prefill: { name, email, contact: phone },
     modal: { ondismiss: () => {} },
+    method: {
+      upi: true,
+      card: true,
+      netbanking: true,
+      wallet: true,
+      emi: false,
+      paylater: false,
+      international: false,
+    },
+    config: {
+      display: {
+        preferences: { show_default_blocks: true },
+        hide: [{ method: 'international' }],
+      },
+    },
   };
 
   if (orderData && orderData.order_id) {
