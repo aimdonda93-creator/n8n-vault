@@ -441,8 +441,32 @@
         <span class="form-hint">Workflow link will be emailed here</span>
       </div>
       <div class="form-group">
-        <label for="buyer-phone">Phone <span class="form-optional">(with country code)</span></label>
-        <input type="tel" id="buyer-phone" placeholder="+91 98765 43210" autocomplete="tel" />
+        <label for="buyer-phone">Phone</label>
+        <div class="phone-input-wrap">
+          <select id="buyer-phone-code" class="phone-code-select" autocomplete="tel-country-code">
+            <option value="+91" selected>🇮🇳 +91</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+61">🇦🇺 +61</option>
+            <option value="+971">🇦🇪 +971</option>
+            <option value="+65">🇸🇬 +65</option>
+            <option value="+60">🇲🇾 +60</option>
+            <option value="+880">🇧🇩 +880</option>
+            <option value="+92">🇵🇰 +92</option>
+            <option value="+94">🇱🇰 +94</option>
+            <option value="+977">🇳🇵 +977</option>
+            <option value="+49">🇩🇪 +49</option>
+            <option value="+33">🇫🇷 +33</option>
+            <option value="+81">🇯🇵 +81</option>
+            <option value="+86">🇨🇳 +86</option>
+            <option value="+82">🇰🇷 +82</option>
+            <option value="+55">🇧🇷 +55</option>
+            <option value="+27">🇿🇦 +27</option>
+            <option value="+234">🇳🇬 +234</option>
+            <option value="+254">🇰🇪 +254</option>
+          </select>
+          <input type="tel" id="buyer-phone" placeholder="98765 43210" autocomplete="tel-national" />
+        </div>
       </div>
 
       <div id="modal-status" class="payment-status" style="display:none;"></div>

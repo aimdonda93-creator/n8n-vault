@@ -1001,6 +1001,49 @@ ul { list-style: none; }
   margin-top: -2px;
 }
 
+/* Phone input with country code dropdown */
+.phone-input-wrap {
+  display: flex;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.phone-input-wrap:focus-within {
+  border-color: var(--purple-light);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+.phone-code-select {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  color: var(--text);
+  font-size: 13px;
+  font-family: var(--font-body);
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+  min-width: 90px;
+  appearance: auto;
+}
+.phone-code-select option {
+  background: #1a1030;
+  color: #fff;
+}
+.phone-input-wrap input[type="tel"] {
+  background: rgba(255,255,255,0.05);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  flex: 1;
+}
+.phone-input-wrap input[type="tel"]:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
 /* Pay button */
 .btn-pay {
   width: 100%;

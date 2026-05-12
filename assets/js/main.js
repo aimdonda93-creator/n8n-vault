@@ -75,9 +75,11 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!validateForm()) return;
 
-  const name  = document.getElementById('buyer-name').value.trim();
-  const email = document.getElementById('buyer-email').value.trim();
-  const phone = document.getElementById('buyer-phone').value.trim();
+  const name      = document.getElementById('buyer-name').value.trim();
+  const email     = document.getElementById('buyer-email').value.trim();
+  const phoneCode = document.getElementById('buyer-phone-code').value;
+  const phoneNum  = document.getElementById('buyer-phone').value.trim();
+  const phone     = phoneNum ? `${phoneCode}${phoneNum.replace(/\s+/g, '')}` : '';
 
   setPayBtnLoading(true);
   showModalStatus('', '');
