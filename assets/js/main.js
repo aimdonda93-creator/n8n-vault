@@ -1,5 +1,5 @@
 const RZP_KEY_ID      = 'rzp_live_SoNX2Ls05bloCP';
-const AMOUNT_PAISE    = 39900; // ₹399 (displayed as ₹499 on site)
+const AMOUNT_PAISE    = 49900; // ₹499
 const DRIVE_LINK_B64  = btoa('https://drive.google.com/file/d/1F4T9ud2QEDhppKNivsJ8DLQ3lX2ngz-I/view?usp=sharing');
 
 /* ── Navbar scroll ── */
